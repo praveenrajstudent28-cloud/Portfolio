@@ -44,7 +44,7 @@ export const siteData = {
   profileCard: {
     label: "Education",
     value: "IIT Kanpur, B.Tech in Mechanical Engineering with Minor in CSE",
-    note: "2021 - 2025 | CPI 7.6/10"
+    note: "2021 - 2025"
   },
   projects: [
     {
@@ -122,7 +122,7 @@ export const siteData = {
     records: [
       {
         label: "B.Tech (ME)",
-        value: "Indian Institute of Technology Kanpur | 2021 - 2025 | CPI 7.6/10"
+        value: "Indian Institute of Technology Kanpur | 2021 - 2025"
       },
       {
         label: "Minor",
