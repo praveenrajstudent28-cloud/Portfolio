@@ -11,7 +11,9 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node server.js"
+    "start": "node server.js",
+    "firebase:deploy": "pnpm build && npx firebase-tools deploy --only hosting",
+    "firebase:preview": "pnpm build && npx firebase-tools hosting:channel:deploy preview"
   },
   "dependencies": {
     "@vitejs/plugin-react": "^5.0.2",

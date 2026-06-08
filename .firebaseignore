@@ -1,0 +1,14 @@
+.git
+.gitignore
+.firebase
+node_modules
+.npm-cache
+.pnpm-store
+server.err.log
+server.out.log
+desktop-shot.png
+mobile-shot.png
+resume-updated-shot.png
+chrome-dom.txt
+debug-dom.html
+debug-dom-scale1.html
