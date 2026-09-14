@@ -2,7 +2,7 @@
 
 Personal portfolio built with React and Vite, hosted on Firebase Hosting.
 
-Live site: https://portfolio-3c236.web.app
+Live site: https://praveenraj.web.app
 
 ## Develop
 
@@ -18,7 +18,7 @@ npm run build
 npx firebase-tools deploy --only hosting --project portfolio-3c236
 ```
 
-Firebase deployment requires an account with access to the project. The hosting configuration is in `firebase.json` and `.firebaserc`.
+Both praveenraj.web.app and the original portfolio-3c236.web.app address serve the same portfolio. Firebase deployment requires an account with access to the project. The hosting configuration is in `firebase.json` and `.firebaserc`.
 
 ## Content and assets
 
