@@ -4,6 +4,16 @@ Personal portfolio built with React and Vite, hosted on Firebase Hosting.
 
 **Live website:** [praveenraj.web.app](https://praveenraj.web.app)
 
+## Featured work
+
+- [APEX API Wrapper](https://github.com/praveenrajstudent28-cloud/Apex-Wrapper): a public FastAPI/HTTPX demo with mock upstream data, request/error handling, tests, Docker and a Kubernetes example. It contains no internal company deployment details.
+- [Real Estate Broker](https://github.com/praveenrajstudent28-cloud/Real_Estate_Broker_WebApp): React/Django/MySQL coursework prototype, frontend structure, data models, SRS and design documents. The portfolio distinguishes prototype and design work from a production product.
+- [Who is the Real Winner?](https://github.com/praveenrajstudent28-cloud/CS253-Assignment): preprocessing, a 10-class Random Forest model, 72 grid-search configurations and five-fold micro-F1 evaluation.
+- [OOPSify](https://github.com/praveenrajstudent28-cloud/ACA-OOPSIFY-asssigments): C++ student-record insertion/retrieval using structs and vectors, plus arithmetic and string exercises.
+- [CAR-PUF](https://github.com/praveenrajstudent28-cloud/CS771-Assignment-CAR-PUF): the repository currently contains an overview only. Its coursework description and reported metrics come from the resume.
+
+Experience and resume content were synchronized in September 2026, including Oracle's AI workflow outcome, API-wrapper work, BASE support, chatbot, MCP server and May 2026 award. Repository descriptions were checked against the public source and supporting coursework documents.
+
 ## Start from scratch on a new computer
 
 You do not need any existing website files, a Firebase account, or environment variables to run this project locally. Follow the steps below on Windows, macOS, or Linux. An internet connection is needed to download the repository and install dependencies.
