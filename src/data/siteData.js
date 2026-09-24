@@ -13,16 +13,34 @@ export const siteData = {
   ],
   projects: [
     {
+      title: "APEX API Wrapper",
+      category: "Backend engineering",
+      year: "2026",
+      context: "Public demo · Based on my API integration work",
+      summary:
+        "Built an asynchronous REST wrapper with Python, FastAPI and HTTPX to connect agent workflows to APEX services. Centralized upstream calls, configurable authentication, query forwarding, timeouts and error responses.",
+      outcome:
+        "The public demo runs against a local mock service and includes request logging, health checks, automated tests, Docker Compose and a Kubernetes deployment example.",
+      stack: ["Python", "FastAPI", "HTTPX", "Docker", "Kubernetes"],
+      visual: "api",
+      resultLabel: "Explore the demo",
+      repoUrl: "https://github.com/praveenrajstudent28-cloud/Apex-Wrapper",
+      repoLabel: "View public demo",
+      featured: true,
+    },
+    {
       title: "CAR-PUF",
       category: "Machine learning",
       year: "2024",
       context: "CS771 · IIT Kanpur · Prof. Purushottam Kar",
       summary:
-        "Modeled challenge-response behavior with a C-SVM classifier, transforming 32-bit challenge vectors into 528-dimensional feature representations.",
+        "Constructed a C-SVM model for CAR-PUF challenge-response prediction, transforming 32-bit challenge vectors into 528-dimensional features. Compared linear classifiers and studied the accuracy/training-time trade-off across C and tolerance settings.",
       outcome:
         "99.07% cross-validation accuracy, alongside 99.19% training accuracy.",
       stack: ["Python", "C-SVM", "Feature engineering"],
       visual: "model",
+      repoUrl: "https://github.com/praveenrajstudent28-cloud/CS771-Assignment-CAR-PUF",
+      repoLabel: "View repository overview",
     },
     {
       title: "Online Real Estate Platform",
@@ -30,11 +48,13 @@ export const siteData = {
       year: "2024",
       context: "CS253 · IIT Kanpur · Prof. Indranil Saha",
       summary:
-        "Led a 10-member team to build a responsive web application for property discovery, listing publication, and buyer-seller coordination, with SQL-backed property and user records.",
+        "Led a 10-member team on a real-estate brokerage prototype using React, Django and MySQL. Co-authored the SRS and design documents, and contributed to frontend planning for property, portfolio, watchlist and funds pages.",
       outcome:
-        "Delivered a working prototype to VeerX and incorporated stakeholder feedback, supported by requirements, system design, test scenarios, and acceptance validation.",
-      stack: ["JavaScript", "SQL", "HTML / CSS", "SDLC"],
+        "Co-designed eight state diagrams for account, property and order workflows. Presented the prototype to VeerX and refined requirements using faculty and stakeholder feedback.",
+      stack: ["React", "Django", "MySQL", "System design"],
       visual: "platform",
+      resultLabel: "My contribution",
+      repoUrl: "https://github.com/praveenrajstudent28-cloud/Real_Estate_Broker_WebApp",
     },
     {
       title: "Who is the Real Winner?",
@@ -42,11 +62,12 @@ export const siteData = {
       year: "2024",
       context: "CS253 · IIT Kanpur · Prof. Indranil Saha",
       summary:
-        "Built a Random Forest multiclass pipeline to predict state-election winners’ education levels from candidate data. Used one-hot encoding, F1-score evaluation, and GridSearchCV for model selection.",
+        "Built a Random Forest pipeline to predict 10 education categories from election-candidate data. Normalized asset and liability amounts in Pandas and one-hot encoded state and party features alongside criminal-case data.",
       outcome:
-        "Reported private / public test scores of 0.22386 / 0.22177, and visualized candidate assets and criminal-record profiles to explore the dataset.",
-      stack: ["Python", "Scikit-learn", "Pandas", "Seaborn"],
+        "Evaluated 72 hyperparameter combinations with five-fold GridSearchCV and micro-F1 scoring. Reported competition scores: 0.22386 private test and 0.22177 public test.",
+      stack: ["Python", "Scikit-learn", "Pandas", "GridSearchCV"],
       visual: "data",
+      repoUrl: "https://github.com/praveenrajstudent28-cloud/CS253-Assignment",
     },
     {
       title: "OOPSify",
@@ -54,11 +75,12 @@ export const siteData = {
       year: "2023",
       context: "Association of Computing Activities · IIT Kanpur",
       summary:
-        "Implemented C++ data structures with dynamic memory management and object-oriented design, applying constructors, destructors, and operator overloading.",
+        "Implemented a command-line student-record manager in C++ using structs and vectors. Added records containing names, roll numbers and departments, and retrieved matching records through roll-number queries.",
       outcome:
-        "Practiced inheritance, polymorphism, and abstraction through hands-on implementation of core programming concepts.",
-      stack: ["C++", "OOP", "Memory management"],
+        "Completed exercises in arithmetic swapping, combinations and string case conversion. Studied memory management and object-oriented concepts alongside these programming assignments.",
+      stack: ["C++", "Structs & vectors", "Programming foundations"],
       visual: "code",
+      repoUrl: "https://github.com/praveenrajstudent28-cloud/ACA-OOPSIFY-asssigments",
     },
   ],
   experience: [
@@ -69,15 +91,19 @@ export const siteData = {
       location: "Hyderabad",
       current: true,
       bullets: [
+        "Built AI agents and GenAI workflows using prompt engineering to automate internal business processes, reducing manual effort by 86%.",
+        "Developed REST API wrappers in Python (FastAPI) and JavaScript (Node.js/Express) for Oracle APEX services, with request timeouts, error handling and diagnostic logging.",
+        "Provided BASE (Business AI Studio Enablement) technical support by resolving user tickets.",
+        "Helped business teams debug and optimize AI agents, improving adoption and development efficiency.",
         "Architected a customer-data query chatbot agent for secure access to customer information.",
-        "Configured an internal MCP server and automated birthday-email notifications and employee leave tracking.",
-        "Resolve BASE program support tickets and help business teams debug and optimize AI agents.",
+        "Built and configured an MCP server for employee events, automating birthday notifications, anniversary tracking and employee leave workflows.",
+        "Received Rockstar of the Month (Applause Award) in May 2026.",
       ],
-      tags: ["GenAI agents", "MCP", "Workflow automation"],
+      tags: ["Python", "LangGraph", "LangChain", "FastMCP", "FastAPI", "Node.js / Express", "Docker", "Kubernetes"],
     },
     {
       period: "Jun 2025 — Dec 2025",
-      role: "Data Scientist",
+      role: "Data Scientist · MLOps & GenAI Application Development",
       company: "Axis Bank",
       location: "Bangalore",
       bullets: [
@@ -95,12 +121,18 @@ export const siteData = {
       bullets: [
         "Analyzed 4–5 years of LLDPE extruder data to investigate barrel leakage, dryer-current overload, and related operating issues.",
         "Supported engineering troubleshooting and managed purchase orders and requisitions in SAP.",
+        "Executed engineering solutions that increased plant output and overall efficiency by 25%.",
         "Received a pre-placement offer for internship performance and contribution.",
       ],
       tags: ["Data analysis", "Root-cause investigation", "SAP"],
     },
   ],
   achievements: [
+    {
+      value: "May ’26",
+      title: "Oracle · Rockstar of the Month",
+      detail: "Received the Applause Award for contributions at Oracle.",
+    },
     {
       value: "PPO",
       title: "Reliance Industries",
@@ -111,11 +143,6 @@ export const siteData = {
       value: "3531",
       title: "JEE Advanced · All India Rank",
       detail: "Ranked among 1.2 lakh shortlisted candidates in 2021.",
-    },
-    {
-      value: "5416",
-      title: "JEE Main · All India Rank",
-      detail: "Secured All India Rank 5416 in 2021.",
     },
     {
       value: "37",
@@ -129,6 +156,10 @@ export const siteData = {
       title: "AI & machine learning",
       items: [
         "Python",
+        "LangGraph",
+        "LangChain",
+        "FastMCP",
+        "Prompt engineering",
         "CrewAI",
         "MCP",
         "Copilot Studio",
@@ -142,7 +173,7 @@ export const siteData = {
     },
     {
       title: "Software engineering",
-      items: ["C / C++", "JavaScript", "React", "HTML / CSS", "Git", "GitHub"],
+      items: ["C / C++", "JavaScript", "React", "Django", "FastAPI", "Node.js / Express", "REST APIs", "Docker", "Kubernetes", "Git / GitHub"],
     },
   ],
 };
