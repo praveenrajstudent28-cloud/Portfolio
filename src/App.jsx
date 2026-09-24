@@ -4,6 +4,13 @@ const sectionLinks = ["Projects", "Experience", "Highlights", "Contact"];
 function Arrow() {
   return <span aria-hidden="true">↗</span>;
 }
+function GitHubIcon() {
+  return (
+    <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true">
+      <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38l-.01-1.49c-2.23.48-2.7-1.08-2.7-1.08-.36-.92-.89-1.17-.89-1.17-.73-.5.05-.49.05-.49.8.06 1.22.82 1.22.82.71 1.22 1.87.87 2.33.67.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 4 0c1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.74.54 1.49l-.01 2.21c0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8Z" />
+    </svg>
+  );
+}
 function Chips({ items }) {
   return (
     <div className="chip-row">
@@ -34,6 +41,16 @@ function ProjectVisual({ project }) {
       className={`project-visual visual-${project.visual}`}
       aria-hidden="true"
     >
+      {project.visual === "api" && (
+        <div className="api-diagram">
+          <span className="api-caption">REST integration · public demo</span>
+          <div className="api-flow">
+            <span>Client</span><i>→</i><strong>FastAPI<br /><small>APEX Wrapper</small></strong><i>→</i><span>Mock<br />upstream</span>
+          </div>
+          <code>GET /hr/employees</code>
+          <div className="api-checks"><span>Timeouts</span><span>Error handling</span><span>Request logs</span></div>
+        </div>
+      )}
       {project.visual === "model" && (
         <div className="model-diagram">
           <span>
@@ -61,7 +78,7 @@ function ProjectVisual({ project }) {
             <i />
             <i />
             <i />
-            <span>Property discovery</span>
+            <span>Brokerage platform · prototype</span>
           </div>
           <div className="mock-listings">
             {[1, 2, 3].map((n) => (
@@ -90,14 +107,12 @@ function ProjectVisual({ project }) {
       )}
       {project.visual === "code" && (
         <div className="code-diagram">
-          <span>// object-oriented thinking</span>
+          <span>// student records, stored in memory</span>
           <p>
-            <b>class</b> DataStructure {"{"}
+            <b>struct</b> Student {"{"}
           </p>
-          <p>
-            &nbsp; <b>public:</b>
-          </p>
-          <p>&nbsp;&nbsp; virtual void insert() = 0;</p>
+          <p>&nbsp; string name, department;</p>
+          <p>&nbsp; <b>int</b> roll;</p>
           <p>{"};"}</p>
         </div>
       )}
@@ -188,9 +203,10 @@ export default function App() {
               </span>
             </h1>
             <p className="hero-blurb">
-              I build AI agents, data workflows, and software that make complex
-              work simpler. IIT Kanpur graduate with experience across
-              enterprise AI, banking, and engineering.
+              I build AI agents, REST APIs, and data workflows that make complex
+              work simpler. At Oracle, my AI workflows reduced manual effort by
+              86%. IIT Kanpur graduate with experience across enterprise AI,
+              banking, and engineering.
             </p>
             <div className="hero-actions">
               <a className="button" href="#projects">
@@ -266,7 +282,7 @@ export default function App() {
           />
           <div className="projects-grid">
             {siteData.projects.map((project, index) => (
-              <article className="project-card" key={project.title}>
+              <article className={`project-card${project.featured ? " project-featured" : ""}`} key={project.title}>
                 <ProjectVisual project={project} />
                 <div className="project-body">
                   <div className="project-meta">
@@ -280,11 +296,14 @@ export default function App() {
                   <p className="project-summary">{project.summary}</p>
                   <div className="project-result">
                     <span className="result-label">
-                      {project.visual === "code" ? "Practice" : "Result"}
+                      {project.resultLabel || (project.visual === "code" ? "Practice" : "Result")}
                     </span>
                     <p>{project.outcome}</p>
                   </div>
                   <Chips items={project.stack} />
+                  <a className="project-repo" href={project.repoUrl} target="_blank" rel="noreferrer" aria-label={`${project.repoLabel || "View code on GitHub"}: ${project.title}`}>
+                    <GitHubIcon /> {project.repoLabel || "View code on GitHub"} <Arrow />
+                  </a>
                 </div>
               </article>
             ))}
@@ -357,7 +376,7 @@ export default function App() {
             </div>
           </div>
           <p className="academic-note">
-            Earlier academics: CBSE XII — 98.4% · CBSE X — 99.2% ·
+            Earlier academics: JEE Main AIR 5416 (2021) · CBSE XII — 98.4% · CBSE X — 99.2% ·
             Merit-Cum-Means Scholarship recipient
           </p>
         </section>
